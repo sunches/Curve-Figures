@@ -12,15 +12,14 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-class TitlesPanel /*Can be package-private*/
+public class TitlesPanel
 extends JPanel
 implements ActionListener {
-    /*Parameters can be converted to a local variable*/
     private boolean is_done = true;
     private int start_angle = 0;
-    /*Commented out  because it is unnecessary:private int shape;*/
 
-    public TitlesPanel() /*настройка анимации*/
+
+    public TitlesPanel() /* Animation configuration*/
     {
         /*Actual value of parameter ''_shape'' is always ''78''*/
         Timer animation = new Timer(50, this);
@@ -28,14 +27,14 @@ implements ActionListener {
         animation.start();
     }
 
-    /*@Override*/
+
     public void actionPerformed(ActionEvent arg0) {
         if (this.is_done) {
             this.repaint();
         }
     }
 
-    private void doDrawing(Graphics g)/*настройка отображения*/
+    private void doDrawing(Graphics g) /* View Configuration */
     {
         this.is_done = false;
         Graphics2D g2d = (Graphics2D) g;
@@ -68,7 +67,7 @@ implements ActionListener {
         this.is_done = true;
     }
 
-   /* @Override*/
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.doDrawing(g);

@@ -10,16 +10,16 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-class ShapeFactory /*Can be package-private*/
+class ShapeFactory
 {
     public Shape shape;
     public BasicStroke stroke = new BasicStroke(3.0f);
     public Paint paint;
-    public final int width = 25;/*Declaration can have final modifier*/
-    public final int height = 25;/*Declaration can have final modifier*/
+    public final int width = 25;
+    public final int height = 25;
 
-    public ShapeFactory() /*возможность выбора фигур*/ {
-        int shape_type;/*Parameter can be converted to a local variable*/
+    public ShapeFactory() /* here we can choose a figure for creation */ {
+        int shape_type;
         switch (shape_type = 9) {
             case 1: {
                 this.shape = ShapeFactory.createStar(3, new Point(0, 0), (double) this.width / 2.0, (double) this.width / 2.0);
@@ -72,12 +72,12 @@ class ShapeFactory /*Can be package-private*/
                 break;
             }
             default: {
-                throw new Error("type is nusupported");/*Added to dictionary*/
+                throw new Error("type is nusupported");
             }
         }
     }
 
-    private static Shape createStar(int arms, Point center, double rOuter, double rInner) /*настройка расположения фигур*/ {
+    private static Shape createStar(int arms, Point center, double rOuter, double rInner) /* Configuration of figures locations */ {
         double angle = 3.141592653589793 / (double) arms;
         GeneralPath path = new GeneralPath();
         int i = 0;
