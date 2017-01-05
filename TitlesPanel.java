@@ -28,7 +28,7 @@ implements ActionListener {
         animation.start();
     }
 
-    @Override
+    /*@Override*/
     public void actionPerformed(ActionEvent arg0) {
         if (this.is_done) {
             this.repaint();
@@ -68,7 +68,7 @@ implements ActionListener {
         this.is_done = true;
     }
 
-    @Override
+   /* @Override*/
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.doDrawing(g);

@@ -21,14 +21,17 @@ extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
+
     public static void main(String[] args) {
-        /*переопределения метода*/
-        SwingUtilities.invokeLater(() -> /*Anonymous new Runnable() can be replaced with lambda*/
-        {
-            TitlesFrame ps = new TitlesFrame();
-            ps.setVisible(true);
-        });
-    }
+                SwingUtilities.invokeLater(new Runnable(){
+
+                  /*   @Override*/
+             public void run() {
+                               TitlesFrame ps = new TitlesFrame();
+                                ps.setVisible(true);
+                            }
+         });
+           }
 
 }
 

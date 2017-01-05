@@ -20,7 +20,7 @@ class ShapeFactory /*Can be package-private*/
 
     public ShapeFactory() /*возможность выбора фигур*/ {
         int shape_type;/*Parameter can be converted to a local variable*/
-        switch (shape_type = 7) {
+        switch (shape_type = 9) {
             case 1: {
                 this.shape = ShapeFactory.createStar(3, new Point(0, 0), (double) this.width / 2.0, (double) this.width / 2.0);
                 break;
